@@ -32,14 +32,13 @@ main() {
     std::cout << "Press Enter to continue." << std::endl;
     std::cin.ignore();
 
-    // input
-    std::cout << "What is the base: " << std::endl;
-    std::cin >> stringBase;
-    std::cout << "What is the height: " << std::endl;
-    std::cin >> stringHeight;
-
     while (true) {
         try {
+            // input
+            std::cout << "What is the base: " << std::endl;
+            std::cin >> stringBase;
+            std::cout << "What is the height: " << std::endl;
+            std::cin >> stringHeight;
             // turns variables into float
             base = std::stof(stringBase);
             height = std::stof(stringHeight);
@@ -48,7 +47,7 @@ main() {
             Area(base, height);
             break;
         } catch (std::invalid_argument) {
-            std::cout << "Invalid input. Try again.";
+            std::cout << "Invalid input. Try again.\n" << std::endl;
             continue;
         }
     }
